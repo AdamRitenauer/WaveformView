@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AudioUIKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyR-hk-gyH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="1000" translatesAutoresizingMaskIntoConstraints="NO" id="PbF-K5-P6f" customClass="WaveformView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PbF-K5-P6f" secondAttribute="trailing" id="6xy-lw-oh9"/>
+                                    <constraint firstItem="PbF-K5-P6f" firstAttribute="width" secondItem="xyR-hk-gyH" secondAttribute="width" id="A5j-jV-lSd"/>
+                                    <constraint firstAttribute="bottom" secondItem="PbF-K5-P6f" secondAttribute="bottom" id="SgQ-fw-zCE"/>
+                                    <constraint firstItem="PbF-K5-P6f" firstAttribute="leading" secondItem="xyR-hk-gyH" secondAttribute="leading" id="edK-Oj-7V2"/>
+                                    <constraint firstItem="PbF-K5-P6f" firstAttribute="top" secondItem="xyR-hk-gyH" secondAttribute="top" id="rNw-p6-FHf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xyR-hk-gyH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="EZD-IL-Wec"/>
+                            <constraint firstItem="xyR-hk-gyH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ICy-qQ-Ibg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="xyR-hk-gyH" secondAttribute="bottom" id="dyU-sp-fcY"/>
+                            <constraint firstItem="xyR-hk-gyH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="e21-WD-dKw"/>
+                            <constraint firstAttribute="trailing" secondItem="xyR-hk-gyH" secondAttribute="trailing" id="jk2-eA-L65"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xyR-hk-gyH" secondAttribute="bottom" id="mFQ-O7-JUF"/>
+                            <constraint firstItem="xyR-hk-gyH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yWl-eq-0Ax"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="EZD-IL-Wec"/>
+                                <exclude reference="ICy-qQ-Ibg"/>
+                                <exclude reference="dyU-sp-fcY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="Z6Y-Ql-uYL"/>
+                        <outlet property="waveform" destination="PbF-K5-P6f" id="XOQ-ND-pzR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

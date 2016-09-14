@@ -1,0 +1,47 @@
+# Mac OS X Finder and whatnot
+.DS_Store
+
+# XCode (and ancestors) per-user config (very noisy, and not relevant)
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+project.xcworkspace
+xcuserdata/
+.idea/
+
+# Generated files
+VersionX-revision.h
+*.orig
+
+# build products
+build/
+build/*.[oa]
+_JenkinsBuilds
+
+*.pyc
+# Other source repository archive directories (protects when importing)
+.hg
+.svn
+CVS
+
+# automatic backup files
+*~.nib
+*.swp
+*~
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+
+Documents/Test[ ]Runs/
+.idea
+scripts/unix/build_packaging/
+scripts/unix/build_staging/
+scripts/unix/glasschord/
+
+Carthage
+
+demo.mp3
